@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>CAMPUS_AMBASSODOR</title>
     <link rel="icon" href="./images/wiss_logo_square.png" />
     <link rel="stylesheet" href="style.css" />
@@ -23,10 +24,13 @@
     <div id="bg"></div>
     <!--HOME-->
     <nav>
-      <img src="images/wiss_logo.png">
+      <div class="nv">
+         <img src="images/Wiss_logo.png" alt="logo">
+      </div>
+      <div class="nv">
       <input type="checkbox" name="" id="check">
       <label for="check" class="checkbtn">
-      <i class="fa fa-bars fa-2x"></i>
+      <i class="fa fa-bars fa-2x" style="margin-right: 7vw; color: white;"></i>
       </label>
       <ul class="list">
          <input type="checkbox" name="" id="check">
@@ -35,10 +39,11 @@
          </label>
          <div class="list-l"><li><a href="index.html">Home</a></li></div>
          <div class="list-l"><li><a href="#About">About us</a></li></div>
-         <div class="list-l"><li><a href="#Responsibilities">Responsibilities</a></li></div>
-         <div class="list-l"><li><a href="#Incentivies">Incentivies</a></li></div>
-         <div class="list-l"><li><a href="#Contact">Contact Us</a></li></div>
+         <div class="list-l"><li><a href="#RESPONSIBILITIES">Responsibilities</a></li></div>
+         <div class="list-l"><li><a href="#incentives">Incentivies</a></li></div>
+         <div class="list-l"><li><a href="#cm-cnt">Contact Us</a></li></div>
       </ul>
+      </div>
   </nav>
     <section class="home">
       <div class="ca">
@@ -46,7 +51,7 @@
           <div class="catxt">CAMPUS <br />AMBASSODOR</div>
           <div class="wiss">WISSENAIRE</div>
           <button class="signup">
-            <a href="./Contact-form/Contact_form.html" id="signup">sign up</a>
+            <a href="signup.html" id="signup">sign up</a>
           </button>
         </div>
         <img src="./images/ca_wiss.png" alt="CA" class="caimg" />
@@ -214,7 +219,7 @@
         </div>
       </div>
     </section>
-    <section class="cmplt-contact">
+    <section class="cmplt-contact" id="cm-cnt">
     <section  id="CONTACT">
       <div class="cont">
           <h1>Get in touch</h1>

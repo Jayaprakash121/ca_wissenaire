@@ -69,9 +69,11 @@ body {
 nav{
   top: -50px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   text-align: center;
   width: 100%;
+  height: 6rem;
 }
 
 nav img{
@@ -99,13 +101,7 @@ nav ul li a{
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-nav .list:hover li :not(:hover){
-  filter: blur(5px);
-}
-nav ul li :hover{
-  filter: blur(0px);
-  color: #719e27cb;
-}
+
 
 nav ul li a{
   text-decoration: none;
@@ -185,72 +181,9 @@ button {
   border: 0ch;
 }
 
-button.menu {
-  right: 5%;
-  margin: 3vh 7.5vw 1rem 3rem;
-  width: min(50px, 10vw);
-  height: 5vh;
-  color: #ffffff;
-  background-color: transparent;
-  transition: all 0.1s;
-}
 
-.bars {
-  position: fixed;
-  top: 3vh;
-  right: 5%;
-  height: 0.6vh;
-  width: min(50px, 10vw);
-  background-color: white;
-  border-radius: 40%;
-  transition: all 0.1s;
-}
 
-.bars::after {
-  content: " ";
-  position: fixed;
-  top: 4.25vh;
-  right: 5%;
-  height: 0.6vh;
-  width: min(50px, 10vw);
-  border-radius: 40%;
-  background-color: white;
-}
 
-.bars::before {
-  content: " ";
-  position: fixed;
-  top: 5.5vh;
-  right: 5%;
-  height: 0.6vh;
-  width: min(50px, 10vw);
-  border-radius: 40%;
-  background-color: white;
-}
-
-.xmark {
-  position: fixed;
-  top: 4vh;
-  right: 5%;
-  height: 0.6vh;
-  width: min(50px, 7vw);
-  background-color: white;
-  rotate: Z 45deg;
-  border-radius: 40%;
-  transition: all 0.1s;
-}
-
-.xmark::after {
-  content: " ";
-  position: fixed;
-  top: 2vh;
-  right: 5%;
-  height: 0.6vh;
-  width: min(50px, 7vw);
-  background-color: white;
-  transform: rotateZ(-90deg) translateX(max(1.2vw, 1.7vh)) translateY(0);
-  border-radius: 40%;
-}
 
 .zero {
   opacity: 0;
