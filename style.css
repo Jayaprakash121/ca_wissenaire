@@ -249,6 +249,7 @@ img.caimg {
   display: flex;
   flex-direction: row;
   background-image: url("images/background_for_main.jpeg");
+  -webkit-background-image: url("images/background_for_main.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   height: max(100vh);
