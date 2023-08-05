@@ -419,7 +419,7 @@ button.signup:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -563,13 +563,15 @@ div.tril {
 
 .cmplt-contact {
   height: fit-content;
-  background-color: #000000;
+  
   
 }
+
 #CONTACT {
   width: 100%;
   padding: 300px 0;
-  background-color: black;
+  background-image: 
+  linear-gradient(transparent 0% 50%, black 50%  100%);
 }
 
 .cont {
