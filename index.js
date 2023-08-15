@@ -38,3 +38,10 @@ prev.onclick = function () {
     active = active - 1 >= 0 ? active - 1 : active;
     loadShow();
 };
+
+let nav = document.getElementsByTagName('nav');
+let li = document.getElementById('list')
+window.addEventListener('scroll', () => {
+    nav[0].classList.add('glass');
+    li.classList.add('glass')
+})

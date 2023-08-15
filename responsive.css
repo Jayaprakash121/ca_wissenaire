@@ -1,362 +1,368 @@
 ::selection {
-    color: coral;
+  color: coral;
+}
+
+/* Styles for desktop view / large screens*/
+@media (min-width: 1024px) {
+  /*bg*/
+  /*home*/
+  nav {
+    height: 100px;
+    justify-content: space-around;
   }
-  
-  /* Styles for desktop view / large screens*/
-  @media (min-width: 1024px) {
-    /*bg*/
-    /*home*/
-    nav {
-      height: 100px;
-      justify-content: space-around;
-    }
-  
-    span.heading {
-      transform: translateY(-100px);
-    }
-  
-    button.menu {
-      display: none;
-    }
-  
-    img.wissenaire {
-      width: 100px;
-    }
-  
-    ul.navs {
-      position: fixed;
-      right: 18%;
-    }
-  
-    div.ca {
-      flex-direction: row;
-      font-size: 3rem;
-    }
-  
-    div#navitems {
-      display: block;
-      float: left;
-      width: 75%;
-      font-size: 25px;
-    }
-  
-    li.nav-item {
-      margin: 2rem 3.5%;
-    }
-  
-    div.info {
-      width: 45%;
-      margin: 5% 2.5%;
-    }
-  
-    div.ca {
-      margin-top: 100px;
-    }
-  
-    img.caimg {
-      width: 50%;
-      margin: 3% 5%;
-    }
-  
-    /*responsibilities*/
-  
-    .rowg {
-      display: flex;
-    }
-  
-    div.containerg {
-      --c: 15deg;
-      width: 20%;
-      height: 35vh;
-      max-width: 420px;
-      margin: 2% 1% 8% 1%;
-    }
-  
-    .card__content {
-      transform: rotateX(-90deg);
-    }
-  
-    .card img {
-      width: 60%;
-    }
-  
-    .containerg:hover img {
-      scale: 0.7;
-      opacity: 0.2;
-    }
-  
-    p.card__description {
-      margin-top: 5rem;
-    }
-  
-    /*incentives*/
-  
-    .slider {
-      height: 500px;
-    }
-  
-    .item {
-      width: 320px;
-      height: 450px;
-    }
-  
-    #next,
-    #prev {
-      height: 450px;
-    }
-  
-    /*contact*/
-  
-    ul.links {
-      width: 60%;
-    }
-  
-    /*contact_form*/
-  
-    fieldset {
-      width: 550px;
-    }
-  
-    .inputBox {
-      margin: 0.5px;
-    }
-  
-    .icon--facebook {
-      color: rgb(40, 85, 182);
-      font-size: 30px;
-      font-weight: bold;
-    }
-  
-    .icon--linkedin {
-      color: rgb(30, 48, 80);
-      font-size: 30px;
-      font-weight: bold;
-    }
-  
-    .icon--twitter {
-      color: rgb(0, 172, 238);
-      font-size: 30px;
-    }
-  
-    .icon--instagram {
-      color: rgb(195, 11, 85);
-      font-size: 30px;
-    }
-  
-    .icon:hover {
-      outline-offset: 4px;
-    }
-  
-    .icon:hover i {
-      animation: shake 0.25s;
-    }
-  
-    .icon--instagram:hover {
-      background-image: radial-gradient(
-        circle at 30% 107%,
-        #fdf497 0%,
-        #fdf497 5%,
-        #fd5949 45%,
-        #d6249f 60%,
-        #285aeb 90%
-      );
-      outline-color: #a02d76;
-      color: white;
-    }
-  
-    .icon--twitter:hover {
-      background-color: #1da1f2;
-      outline-color: #1da1f2;
-      color: white;
-    }
-  
-    .icon--linkedin:hover {
-      background-color: #0077b5;
-      outline-color: #0077b5;
-      color: white;
-    }
-  
-    .icon--facebook:hover {
-      background-color: rgb(40, 85, 182);
-      outline-color: rgb(40, 85, 182);
-      color: white;
-    }
+
+  span.heading {
+    transform: translateY(-100px);
   }
-  
-  /* Media query for tablets/mobiles */
-  @media (max-width: 1023px) {
-    nav {
-      flex-direction: column;
-      height: 9vh;
-    }
-  
-    span.heading {
-      transform: translateY(-10vh);
-    }
-  
-    div.small {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  
-    button.menu {
-      border-left: 70%;
-      display: block;
-      translate: X -5vw;
-    }
-  
-    img.wissenaire {
-      height: 7rem;
-      min-height: 7vh;
-      max-height: 8vh;
-      left: 10px;
-    }
-  
-    div#navitems {
-      position: fixed;
-      background: radial-gradient(#0c0c32 75%, #191919 100%);
-      background-size: 99vw 220vh;
-      top: 8.5vh;
-      width: 100%;
-      font-size: 2vh;
-    }
-  
-    .remove {
-      transform: translateY(-75px) scaleY(0);
-      opacity: 0;
-    }
-  
-    ul.navs {
-      flex-direction: column;
-    }
-  
-    li.nav-item {
-      text-align: center;
-      margin: 0.2% 2%;
-    }
-  
-    div.ca {
-      margin-top: 10vh;
-      justify-content: space-evenly;
-      flex-direction: column;
-    }
-  
-    div.info {
-      width: 90%;
-      margin: 5% 5%;
-    }
-  
-    img.caimg {
-      width: 80%;
-      margin: 0% 12.5%;
-    }
-  
-    button.signup {
-      width: 70vw;
-      max-width: 500px;
-      margin: 5vh 0vw;
-    }
-  
-    /*respnsibilities*/
-  
-    .rowg {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      border: 0;
-      padding: 0;
-    }
-  
-    div.containerg {
-      --c: 10deg;
-      aspect-ratio: 10/12;
-      height: calc(1.5 * var(--w));
-      max-width: 60vw;
-      margin: 4vh 0;
-    }
-  
-    .card__content {
-      position: relative;
-      transform: rotateX(0);
-    }
-  
-    .card img {
-      height: 10vh;
-      width: auto;
-      translate: Y 50vw;
-    }
-  
-    p.card__description {
-      color: rgb(3, 166, 171);
-    }
-  
-    /*incentives*/
-  
-    .slider {
-      height: calc(1.6 * var(--w));
-      margin-bottom: 5vh;
-    }
-  
-    @property --w {
-      syntax: "<length>";
-      inherits: false;
-      initial-value: min(45vw, 37vh);
-    }
-  
-    .item {
-      aspect-ratio: 10/15;
-      height: calc(1.6 * var(--w));
-      background-size: cover;
-    }
-  
-    #next,
-    #prev {
-      height: calc(1.6 * var(--w));
-    }
-    /*contact*/
-    .icon--instagram {
-      background-image: radial-gradient(
-        circle at 30% 107%,
-        #fdf497 0%,
-        #fdf497 5%,
-        #fd5949 45%,
-        #d6249f 60%,
-        #285aeb 90%
-      );
-      border-color: #a02d76;
-      color: white;
-    }
-  
-    .icon--twitter {
-      background-color: #1da1f2;
-      border-color: #1da1f2;
-      color: white;
-    }
-  
-    .icon--linkedin {
-      background-color: #0077b5;
-      border-color: #0077b5;
-      color: white;
-    }
-  
-    .icon--facebook {
-      background-color: rgb(40, 85, 182);
-      border-color: rgb(40, 85, 182);
-      color: white;
-    }
-  
-    /*contact_form*/
-  
-    fieldset {
-      width: 80%;
-      min-height: 90vh;
-    }
-  
-    .inputBox {
-      margin: 1vh 0px;
+
+  button.menu {
+    display: none;
+  }
+
+  img.wissenaire {
+    width: 100px;
+  }
+
+  ul.navs {
+    position: fixed;
+    right: 18%;
+  }
+
+  div.ca {
+    flex-direction: row;
+    font-size: 3rem;
+  }
+
+  div#navitems {
+    display: block;
+    float: left;
+    width: 75%;
+    font-size: 25px;
+  }
+
+  li.nav-item {
+    margin: 2rem 3.5%;
+  }
+
+  div.info {
+    width: 45%;
+    margin: 5% 2.5%;
+  }
+
+  div.ca {
+    margin-top: 100px;
+  }
+
+  img.caimg {
+    width: 50%;
+    margin: 3% 5%;
+  }
+
+  /*responsibilities*/
+
+  .rowg {
+    display: flex;
+  }
+
+  div.containerg {
+    --c: 15deg;
+    width: 20%;
+    height: 35vh;
+    max-width: 420px;
+    margin: 2% 1% 8% 1%;
+  }
+
+  .card__content {
+    transform: rotateX(-90deg);
+  }
+
+  .card img {
+    width: 60%;
+  }
+
+  .containerg:hover img {
+    scale: 0.7;
+    opacity: 0.2;
+  }
+
+  p.card__description {
+    margin-top: 5rem;
+  }
+
+  /*incentives*/
+
+  .slider {
+    height: 500px;
+  }
+
+  .item {
+    width: 320px;
+    height: 450px;
+  }
+
+  #next,
+  #prev {
+    height: 450px;
+  }
+
+  /*contact*/
+
+  ul.links {
+    width: 60%;
+  }
+
+  /*contact_form*/
+
+  fieldset {
+    width: 550px;
+  }
+
+  .inputBox {
+    margin: 0.5px;
+  }
+
+  .icon--facebook {
+    color: rgb(40, 85, 182);
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .icon--linkedin {
+    color: rgb(30, 48, 80);
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .icon--twitter {
+    color: rgb(0, 172, 238);
+    font-size: 30px;
+  }
+
+  .icon--instagram {
+    color: rgb(195, 11, 85);
+    font-size: 30px;
+  }
+
+  .icon:hover {
+    outline-offset: 4px;
+  }
+
+  .icon:hover i {
+    animation: shake 0.25s;
+  }
+
+  .icon--instagram:hover {
+    background-image: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    outline-color: #a02d76;
+    color: white;
+  }
+
+  .icon--twitter:hover {
+    background-color: #1da1f2;
+    outline-color: #1da1f2;
+    color: white;
+  }
+
+  .icon--linkedin:hover {
+    background-color: #0077b5;
+    outline-color: #0077b5;
+    color: white;
+  }
+
+  .icon--facebook:hover {
+    background-color: rgb(40, 85, 182);
+    outline-color: rgb(40, 85, 182);
+    color: white;
+
+    .glass {
+      background: transparent;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
   }
+}
+
+/* Media query for tablets/mobiles */
+@media (max-width: 1023px) {
+  nav {
+    flex-direction: column;
+    height: 9vh;
+  }
+
+  span.heading {
+    transform: translateY(-10vh);
+  }
+
+  div.small {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  button.menu {
+    border-left: 70%;
+    display: block;
+    translate: X -5vw;
+  }
+
+  img.wissenaire {
+    height: 7rem;
+    min-height: 7vh;
+    max-height: 8vh;
+    left: 10px;
+  }
+
+  div#navitems {
+    position: fixed;
+    background: radial-gradient(#0c0c32 75%, #191919 100%);
+    background-size: 99vw 220vh;
+    top: 8.5vh;
+    width: 100%;
+    font-size: 2vh;
+  }
+
+  .remove {
+    transform: translateY(-75px) scaleY(0);
+    opacity: 0;
+  }
+
+  ul.navs {
+    flex-direction: column;
+  }
+
+  li.nav-item {
+    text-align: center;
+    margin: 0.2% 2%;
+  }
+
+  div.ca {
+    margin-top: 10vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  div.info {
+    width: 90%;
+    margin: 5% 5%;
+  }
+
+  img.caimg {
+    width: 80%;
+    margin: 0% 12.5%;
+  }
+
+  button.signup {
+    width: 70vw;
+    max-width: 500px;
+    margin: 5vh 0vw;
+  }
+
+  /*respnsibilities*/
+
+  .rowg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+
+  div.containerg {
+    --c: 10deg;
+    aspect-ratio: 10/12;
+    height: calc(1.5 * var(--w));
+    max-width: 60vw;
+    margin: 4vh 0;
+  }
+
+  .card__content {
+    position: relative;
+    transform: rotateX(0);
+  }
+
+  .card img {
+    height: 10vh;
+    width: auto;
+    translate: Y 50vw;
+  }
+
+  p.card__description {
+    color: rgb(3, 166, 171);
+  }
+
+  /*incentives*/
+
+  .slider {
+    height: calc(1.6 * var(--w));
+    margin-bottom: 5vh;
+  }
+
+  @property --w {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: min(45vw, 37vh);
+  }
+
+  .item {
+    aspect-ratio: 10/15;
+    height: calc(1.6 * var(--w));
+    background-size: cover;
+  }
+
+  #next,
+  #prev {
+    height: calc(1.6 * var(--w));
+  }
+  /*contact*/
+  .icon--instagram {
+    background-image: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    border-color: #a02d76;
+    color: white;
+  }
+
+  .icon--twitter {
+    background-color: #1da1f2;
+    border-color: #1da1f2;
+    color: white;
+  }
+
+  .icon--linkedin {
+    background-color: #0077b5;
+    border-color: #0077b5;
+    color: white;
+  }
+
+  .icon--facebook {
+    background-color: rgb(40, 85, 182);
+    border-color: rgb(40, 85, 182);
+    color: white;
+  }
+
+  /*contact_form*/
+
+  fieldset {
+    width: 80%;
+    min-height: 90vh;
+  }
+
+  .inputBox {
+    margin: 1vh 0px;
+  }
+}
