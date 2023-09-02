@@ -5,6 +5,8 @@
 /* Styles for desktop view / large screens*/
 @media (min-width: 1024px) {
   /*bg*/
+
+
   /*home*/
   nav {
     height: 100px;
@@ -55,7 +57,7 @@
 
   img.caimg {
     width: 50%;
-    margin: 3% 5%;
+    margin: 3% 0;
   }
 
   /*responsibilities*/
@@ -191,15 +193,19 @@
 
 /* Media query for tablets/mobiles */
 @media (max-width: 1023px) {
+  .rotate{
+    transform: rotateX(180deg);
+  }
+  
   nav {
     flex-direction: column;
     height: 9vh;
   }
 
-  span.heading {
-    transform: translateY(-10vh);
+  .reveal{
+    translate: rotateX;
   }
-
+  
   div.small {
     display: flex;
     flex-direction: row;
@@ -222,20 +228,48 @@
 
   div#navitems {
     position: fixed;
-    background: radial-gradient(#0c0c32 75%, #191919 100%);
-    background-size: 99vw 220vh;
-    top: 8.5vh;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background-size: 100vw 100vh;
     width: 100%;
     font-size: 2vh;
+    top: 5.5rem;
+    transform-origin: top;
+    transform: scaleY(0);
   }
 
-  .remove {
-    transform: translateY(-75px) scaleY(0);
-    opacity: 0;
+  .appear {
+    animation: id 200ms ;
+    animation-fill-mode: forwards;
   }
+
+  
+  .disappear {
+    animation: lid 200ms ;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes lid {
+    from{
+      transform: scaleY(1);
+    }
+    to{
+      transform: scaleY(0);
+    }
+  }
+
+
+  @keyframes id {
+    to{
+      transform: scaleY(1);
+    }
+  }
+
 
   ul.navs {
     flex-direction: column;
+    border: 0;
+    padding: 0;
+    border: 0;
   }
 
   li.nav-item {
@@ -303,7 +337,7 @@
   /*incentives*/
 
   .slider {
-    height: calc(1.6 * var(--w));
+    height: calc(1.9 * var(--w));
     margin-bottom: 5vh;
   }
 
@@ -315,13 +349,13 @@
 
   .item {
     aspect-ratio: 10/15;
-    height: calc(1.6 * var(--w));
+    height: calc(1.8 * var(--w));
     background-size: cover;
   }
 
   #next,
   #prev {
-    height: calc(1.6 * var(--w));
+    height: calc(1.8 * var(--w));
   }
   /*contact*/
   .icon--instagram {
