@@ -11,6 +11,7 @@ function loadShow() {
     items[active].style.filter = "none";
     items[active].style.opacity = 1;
 
+
     for (var i = 0; i < items.length; i++) {
         if (i == active)
             continue;
@@ -78,7 +79,7 @@ prev.onclick = function () {
 setInterval(() => {
     active = active + 1 < items.length ? active + 1 : 0;
     loadShow();
-}, 2000);
+}, 3000);
 
 let navs = document.getElementsByClassName("navs");
 let cel = document.getElementById("navitems");

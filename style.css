@@ -12,7 +12,7 @@
   width: 1px;
   height: 1px;
   background: transparent;
-  box-shadow: 631px 1711px #fff, 1915px 1257px #fff, 1652px 722px #fff,
+  box-shadow: 631px 1711px #fff, 2915px 1257px #fff, 1652px 722px #fff,
     70px 66px #fff, 1380px 857px #fff, 1929px 280px #fff, 589px 974px #fff,
     352px 705px #fff, 64px 61px #fff, 1186px 1478px #fff, 1682px 1897px #fff,
     1408px 401px #fff, 1522px 1083px #fff, 1785px 1728px #fff, 1615px 94px #fff,
@@ -786,22 +786,39 @@ img.caimg {
 }
 
 button.signup {
-  background: #3e77bc15;
+  position: relative;
+  background: linear-gradient(to right,#38495a,#3E77BCa5);
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   position: relative;
   margin-top: 2vh;
   padding: 1.25px 25px;
   border-radius: 200px;
-  box-shadow: 3px 3px 0 2px white,
-    -3px -3px 0 2px white;
-    text-shadow: -1px -1px whitesmoke;
+}
+
+.signup:hover .arrow {
+  animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 a#signup {
-  color: #38499a;
+  justify-self: center;
+  color: white;
   text-align: start;
   font-family: "libre";
+  transform:translateX(10px);
 }
 
 
@@ -817,7 +834,7 @@ a#signup {
 
 .container2 {
   width: 100%;
-  padding: 50px 15vw;
+  padding: 50px 5vw;
   align-items: center;
 }
 
@@ -898,8 +915,8 @@ a#signup {
   background-attachment: fixed;
   perspective: 1000px;
   height: 28vh;
-  width: 300px;
-  max-width: 300px;
+  width: 350px;
+  max-width: 350px;
   cursor: pointer;
   margin-bottom: 20px;
 }
@@ -1320,7 +1337,7 @@ li.link:hover {
     font-size: max(5vh, 4vw);
   }
   button.signup {
-    font-size: max(3vw, 4vh);
+    font-size: max(2.75vw, 3.75vh);
   }
   .card-inner h1 {
     font-size: max(3.5vh, 3.5vw);
