@@ -103,7 +103,7 @@
   }
 
   #next,
-  #prev {
+  #prev,#next-t,#prev-t {
     height: 450px;
   }
 
@@ -354,7 +354,7 @@
   }
 
   #next,
-  #prev {
+  #prev ,#next-t,#prev-t{
     height: calc(1.8 * var(--w));
   }
   /*contact*/

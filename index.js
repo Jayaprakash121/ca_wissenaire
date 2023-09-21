@@ -136,13 +136,43 @@ window.addEventListener('scroll', () => {
         menu.classList.add("bars");
         menu.classList.remove("zero");
     }, 100);
-        var k = c[0].getBoundingClientRect().top
-        if (k <= -150)
-            c[0].classList.remove('rotate')
-        else if (k <= (10 * Y / 18))
-            c[0].classList.add('rotate')
-        else if (k >= (3 * Y / 5))
-            c[0].classList.remove('rotate')
+    var k = c[0].getBoundingClientRect().top
+    if (k <= -150)
+        c[0].classList.remove('rotate')
+    else if (k <= (10 * Y / 18))
+        c[0].classList.add('rotate')
+    else if (k >= (3 * Y / 5))
+        c[0].classList.remove('rotate')
 })
 
 
+let test = document.querySelectorAll('.card-t')
+let n = test.length
+let act = 3
+function testimonials() {
+    for (let i = 0; i < n; i++) {
+        test[act].style.transform = 'translateX(0)'
+        test[act].style.opacity = 1;
+        if (i == (((act + 1) < n) ? act + 1 : 0))
+            test[i].style.transform = "translateX(100vw)";
+        else if (i == (((act - 1) >= 0) ? act - 1 : n - 1))
+            test[i].style.transform = "translateX(-100vw)";
+        else if (i != act) {
+            test[i].style.opacity = 0;
+            test[i].style.transform = "translateX(0)";
+        }
+    }
+}
+testimonials()
+
+let nextT = document.getElementById("next-t");
+let prevT = document.getElementById("prev-t");
+
+nextT.onclick = function () {
+    act = ((act + 1) < n) ? act + 1 : 0
+    testimonials()
+};
+prevT.onclick = function () {
+    act = act - 1 >= 0 ? act - 1 : n - 1;
+    testimonials()
+};
