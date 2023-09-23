@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="./contact_form_css.css">
     <link rel="icon" href="../images/wiss_logo.png">
     <title>CONATCT_FORM</title>
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/MR2VZux9oT8doO4G/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("You have successfully registered!:) ")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
 </head>
 
 <body>
@@ -15,7 +34,7 @@
         <div id="stars2"></div>
         <div id="stars3"></div>
     </div>
-    <fieldset>
+    <fieldset id="myForm">
         <section style="display: flex;justify-content: center;
         ">
             <img src="../images/wiss_logo_square.png" alt="W" style="height: 80px;;margin: 0;padding: 0;border-bottom: -10px;">
@@ -23,31 +42,31 @@
             <h2 style="font-size: large;color: rgb(255, 234, 255);margin-top: 2.5px;margin-bottom: 2.5px;">CAMPUS AMBASSODOR</h2></div>
         </section>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input name="Cname" type="text" required="required">
             <span>Name</span>
         </div>
         <div class="inputBox">
-            <input type="email" required="required">
+            <input name="Cemail" type="email" required="required">
             <span>Email</span>
         </div>
         <div class="inputBox">
-            <input type="tel" required="required" pattern="[0-9]{10}">
+            <input name="Cnum" type="tel" required="required" pattern="[0-9]{10}">
             <span>Phone Number</span>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input name="Cinst" type="text" required="required">
             <span>Institute of Study</span>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input name="Cbranch" type="text" required="required">
             <span>Branch</span>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input name="Ccity" type="text" required="required">
             <span>City</span>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input name="Cref" type="text" required="required">
             <span>Referal</span>
         </div>
         <div class="inputBox">
@@ -55,7 +74,7 @@
             <span>Message</span>
         </div>
         <div class="inputBox">
-            <button>Submit</button>
+            <button onclick='SubForm()' >Submit</button>
         </div>
     </fieldset>
 
