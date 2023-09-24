@@ -144,11 +144,19 @@ window.addEventListener('scroll', () => {
     else if (k >= (3 * Y / 5))
         c[0].classList.remove('rotate')
 })
+for (let i = 0; i < c.length; i++) {
+    c[i].onclick = () => {
+        if (!c[i].classList.contains('rotate'))
+            c[i].classList.add('rotate');
+        else
+            c[i].classList.remove('rotate')
+    }
+}
 
 
 let test = document.querySelectorAll('.card-t')
 let n = test.length
-let act = 3
+let act = 0
 function testimonials() {
     for (let i = 0; i < n; i++) {
         test[act].style.transform = 'translateX(0)'
@@ -157,10 +165,6 @@ function testimonials() {
             test[i].style.transform = "translateX(100vw)";
         else if (i == (((act - 1) >= 0) ? act - 1 : n - 1))
             test[i].style.transform = "translateX(-100vw)";
-        else if (i != act) {
-            test[i].style.opacity = 0;
-            test[i].style.transform = "translateX(0)";
-        }
     }
 }
 testimonials()
@@ -169,10 +173,12 @@ let nextT = document.getElementById("next-t");
 let prevT = document.getElementById("prev-t");
 
 nextT.onclick = function () {
+    test[(act - 1 >= 0 ? act - 1 : n - 1)].style.opacity = 0;
     act = ((act + 1) < n) ? act + 1 : 0
     testimonials()
 };
 prevT.onclick = function () {
+    test[(((act + 1) < n) ? act + 1 : 0)].style.opacity = 0;
     act = act - 1 >= 0 ? act - 1 : n - 1;
     testimonials()
 };

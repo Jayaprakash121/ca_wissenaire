@@ -958,6 +958,8 @@ a#signup {
   margin-top: 15px;
   font-weight: 600;
   font-family: "Roboto-l";
+  display: flex;
+  flex-direction: column;
 }
 .content p {
   font-family: "Roboto-m";
@@ -971,10 +973,6 @@ a#signup {
   color: #ffffff;
   transform: rotateX(180deg);
 }
-.container:hover .card {
-  transform: rotateX(180deg);
-}
-
 /*INCENTIVES*/
 
 .incen-content {
@@ -1049,7 +1047,9 @@ a#signup {
 }
 
 #next,
-#prev,#next-t,#prev-t {
+#prev,
+#next-t,
+#prev-t {
   position: absolute;
   display: flex;
   align-items: center;
@@ -1078,7 +1078,8 @@ div.tril {
   border-left: 1rem solid rgb(28, 247, 255);
 }
 
-#next,#next-t {
+#next,
+#next-t {
   display: grid;
   justify-items: end;
   left: unset;
@@ -1113,18 +1114,17 @@ div.tril {
   position: absolute;
   transition: transform 0.5s;
 }
-.card-t .description{
+.card-t .description {
   width: 100vw;
-  padding: 0 10vw 10% 10vw  ;
-  height: 30%;
+  padding: 0 10vw 3% 10vw;
 }
-.img{
+.img {
   display: flex;
   justify-content: center;
   align-items: start;
 }
-.img img{
-  height:200px;
+.img img {
+  height: 200px;
   aspect-ratio: 1;
   border-radius: 50%;
 }
@@ -1292,7 +1292,6 @@ a#wissenaire_web {
   height: 40px;
   text-decoration: none;
   font-size: 25px;
-
   border-radius: 60%;
   outline: 2px solid #fff;
   transition-property: outline-offset, outline-color, background-color;
@@ -1314,8 +1313,17 @@ li.link:hover {
 .icon i {
   margin: auto;
 }
-
-.icon:hover i {
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon img {
+  width: 30px;
+  aspect-ratio: 1;
+}
+.icon:hover i,
+.icon:hover img {
   animation: shake 0.25s;
 }
 
@@ -1333,8 +1341,8 @@ li.link:hover {
 }
 
 .icon--twitter:hover {
-  background-color: #1da1f2;
-  outline-color: #1da1f2;
+  background-color: #292929;
+  outline-color: #ffffff;
   color: white;
 }
 
@@ -1383,13 +1391,17 @@ li.link:hover {
   .card-inner h1 {
     font-size: max(3.5vh, 3.5vw);
   }
+  h1#fur {
+    font-size: max(2.5vw, 2.25vh);
+  }
   .card-inner p {
     font-size: max(1.9vh, 1.4vw);
   }
   .card__title {
     font-size: max(3vh, 3vw);
   }
-  .card__description {
+  .card__description,
+  .description p {
     font-size: max(1.4vh, 1.3vw);
   }
   p.ca {
@@ -1424,8 +1436,12 @@ li.link:hover {
   div.wiss p {
     font-size: max(6.5vh, 5.5vw);
   }
-  button.signup {
+  button.signup,
+  h1#fur {
     font-size: max(3.5vw, 5vh);
+  }
+  h1#fur {
+    font-size: max(3vw, 3vh);
   }
   .card-inner h1 {
     font-size: max(4.5vh, 4.5vw);
@@ -1436,7 +1452,8 @@ li.link:hover {
   .card__title {
     font-size: max(4vh, 3vw);
   }
-  .card__description {
+  .card__description,
+  .description p {
     font-size: max(1.7vh, 1.6vw);
   }
   p.ca {

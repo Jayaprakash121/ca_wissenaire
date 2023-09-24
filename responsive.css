@@ -6,7 +6,6 @@
 @media (min-width: 1024px) {
   /*bg*/
 
-
   /*home*/
   nav {
     height: 100px;
@@ -91,6 +90,10 @@
     margin-top: 5rem;
   }
 
+  .container:hover .card {
+    transform: rotateX(180deg);
+  }
+
   /*incentives*/
 
   .slider {
@@ -103,7 +106,9 @@
   }
 
   #next,
-  #prev,#next-t,#prev-t {
+  #prev,
+  #next-t,
+  #prev-t {
     height: 450px;
   }
 
@@ -136,7 +141,7 @@
   }
 
   .icon--twitter {
-    color: rgb(0, 172, 238);
+    color: #292929;
     font-size: 30px;
   }
 
@@ -167,8 +172,8 @@
   }
 
   .icon--twitter:hover {
-    background-color: #1da1f2;
-    outline-color: #1da1f2;
+    background-color: #292929;
+    outline-color: #ffffff;
     color: white;
   }
 
@@ -193,19 +198,19 @@
 
 /* Media query for tablets/mobiles */
 @media (max-width: 1023px) {
-  .rotate{
+  .rotate {
     transform: rotateX(180deg);
   }
-  
+
   nav {
     flex-direction: column;
     height: 9vh;
   }
 
-  .reveal{
+  .reveal {
     translate: rotateX;
   }
-  
+
   div.small {
     display: flex;
     flex-direction: row;
@@ -238,32 +243,29 @@
   }
 
   .appear {
-    animation: id 200ms ;
+    animation: id 200ms;
     animation-fill-mode: forwards;
   }
 
-  
   .disappear {
-    animation: lid 200ms ;
+    animation: lid 200ms;
     animation-fill-mode: forwards;
   }
 
   @keyframes lid {
-    from{
+    from {
       transform: scaleY(1);
     }
-    to{
+    to {
       transform: scaleY(0);
     }
   }
 
-
   @keyframes id {
-    to{
+    to {
       transform: scaleY(1);
     }
   }
-
 
   ul.navs {
     flex-direction: column;
@@ -354,7 +356,9 @@
   }
 
   #next,
-  #prev ,#next-t,#prev-t{
+  #prev,
+  #next-t,
+  #prev-t {
     height: calc(1.8 * var(--w));
   }
   /*contact*/
@@ -372,8 +376,8 @@
   }
 
   .icon--twitter {
-    background-color: #1da1f2;
-    border-color: #1da1f2;
+    background-color: #292929;
+    border-color: #ffffff;
     color: white;
   }
 
@@ -398,5 +402,8 @@
 
   .inputBox {
     margin: 1vh 0px;
+  }
+  h1#fur{
+    padding: 0 5%;
   }
 }
