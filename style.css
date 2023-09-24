@@ -1394,14 +1394,17 @@ li.link:hover {
   h1#fur {
     font-size: max(2.5vw, 2.25vh);
   }
-  .card-inner p {
+  .card-inner p,
+  .card-t p {
     font-size: max(1.9vh, 1.4vw);
+  }
+  .card-t .description {
+    font-size: max(2.25vw, 2.25vh);
   }
   .card__title {
     font-size: max(3vh, 3vw);
   }
-  .card__description,
-  .description p {
+  .card__description {
     font-size: max(1.4vh, 1.3vw);
   }
   p.ca {
@@ -1436,24 +1439,26 @@ li.link:hover {
   div.wiss p {
     font-size: max(6.5vh, 5.5vw);
   }
-  button.signup,
-  h1#fur {
+  button.signup {
     font-size: max(3.5vw, 5vh);
   }
   h1#fur {
     font-size: max(3vw, 3vh);
   }
+  .card-t .description {
+    font-size: max(3vw, 3vh);
+  }
   .card-inner h1 {
     font-size: max(4.5vh, 4.5vw);
   }
-  .card-inner p {
+  .card-inner p,
+  .card-t p {
     font-size: max(2.2vh, 2.2vw);
   }
-  .card__title {
+  .card__title{
     font-size: max(4vh, 3vw);
   }
-  .card__description,
-  .description p {
+  .card__description {
     font-size: max(1.7vh, 1.6vw);
   }
   p.ca {
