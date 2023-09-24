@@ -13,9 +13,8 @@
 		crossorigin="anonymous"></script>
 	<script>
 		function SubForm (){
-			console.log('submitting');
 			$.ajax({
-				url:"https://api.apispreadsheets.com/data/J7jYpP4R2bmtqNty/",
+				url:"https://api.apispreadsheets.com/data/u9Da68KtkLosu3Fu/",
 				type:"post",
 				data:$("#myForm").serializeArray(),
 				success: function(){
@@ -23,7 +22,6 @@
 				},
 				error: function(){
 					alert("There was an error :(")
-					
 				}
 			});
 		}
@@ -36,7 +34,7 @@
         <div id="stars2"></div>
         <div id="stars3"></div>
     </div>
-    <fieldset onSubmit='SubForm()'>
+    <fieldset id="myForm">
         <section style="display: flex;justify-content: center;margin-bottom: 2vh;
         ">
             <img src="../images/wiss_logo_square.png" alt="W"
@@ -46,27 +44,27 @@
         <h2 style="font-size: large;color: rgb(255, 234, 255);margin-top: 2.5px;margin-bottom: 2.5vh ;">CAMPUS AMBASSODOR
         </h2>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input name="Cname" type="text" required="required">
             <span>Name</span>
         </div>
         <div class="inputBox">
-            <input type="email" required="required">
+            <input name="Cemail" type="email" required="required">
             <span>Email</span>
         </div>
         <div class="inputBox">
-            <input type="tel" required="required" pattern="[0-9]{10}">
+            <input  name="Cnum" type="tel" required="required" pattern="[0-9]{10}">
             <span>Phone Number</span>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input name="Cinst" type="text" required="required">
             <span>Institute of Study</span>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input name="Cbranch" type="text" required="required">
             <span>Branch</span>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input name="Ccity" type="text" required="required">
             <span>City</span>
         </div>
         <div class="inputBox">
@@ -78,7 +76,7 @@
             <span>Message</span>
         </div>
         <div class="inputBox">
-            <button type='submit'>Submit</button>
+            	<button onclick='SubForm()'>Submit</button>
         </div>
     </fieldset>
 
