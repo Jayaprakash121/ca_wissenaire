@@ -1446,7 +1446,7 @@ li.link:hover {
     font-size: max(3vw, 3vh);
   }
   .card-t .description {
-    font-size: max(3vw, 3vh);
+    font-size: max(2.25vw, 2.25vh);
   }
   .card-inner h1 {
     font-size: max(4.5vh, 4.5vw);

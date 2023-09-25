@@ -146,8 +146,13 @@ window.addEventListener('scroll', () => {
 })
 for (let i = 0; i < c.length; i++) {
     c[i].onclick = () => {
-        if (!c[i].classList.contains('rotate'))
+        if (!c[i].classList.contains('rotate')) {
             c[i].classList.add('rotate');
+            for (let j = 0; j < c.length; j++) {
+                if (j != i && c[j].classList.contains('rotate'))
+                    c[j].classList.remove('rotate')
+            }
+        }
         else
             c[i].classList.remove('rotate')
     }
