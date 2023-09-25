@@ -1088,6 +1088,7 @@ div.tril {
 /*TESTIMONIALS*/
 .testimonials {
   width: 100vw;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1122,6 +1123,7 @@ div.tril {
   display: flex;
   justify-content: center;
   align-items: start;
+  margin-top: 7vh;
 }
 .img img {
   height: 200px;

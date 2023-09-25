@@ -5,27 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./contact_form_css.css">
-     <link rel="icon" href="../images/wiss_logo_square.png" />
+    <link rel="icon" href="../images/wiss_logo_square.png" />
     <title>CA Program - Wissenaire'24 | IIT Bhubaneswar</title>
-   	<script
-		src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous"></script>
-	<script>
-		function SubForm (){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/u9Da68KtkLosu3Fu/",
-				type:"post",
-				data:$("#myForm").serializeArray(),
-				success: function(){
-					alert("You Have Succesfully registered!")
-				},
-				error: function(){
-					alert("There was an error :(")
-				}
-			});
-		}
-	</script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: "https://api.apispreadsheets.com/data/u9Da68KtkLosu3Fu/",
+                type: "post",
+                data: $("#myForm").serializeArray(),
+                success: function () {
+                    alert("You Have Succesfully registered!")
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -37,11 +35,11 @@
     <fieldset id="myForm">
         <section style="display: flex;justify-content: center;margin-bottom: 2vh;
         ">
-            <img src="../images/wiss_logo_square.png" alt="W"
-                style="width: 100px;max-width: 40vw;margin: 0;padding: 0;border-bottom: -10px;">
-                <h1 style="margin-top: 2.5px;margin-bottom: 2.5px;align-self: flex-end;">ISSENAIRE</h1>
+            <img src="../images/wiss_img.png" alt="W"
+                style="width:350px ;max-width: 90%;margin: 0;padding: 0;margin-bottom: 2vh;">
         </section>
-        <h2 style="font-size: large;color: rgb(255, 234, 255);margin-top: 2.5px;margin-bottom: 2.5vh ;">CAMPUS AMBASSADOR
+        <h2 style="font-size: large;color: rgb(255, 234, 255);margin-top: 2.5px;margin-bottom: 2.5vh ;">CAMPUS
+            AMBASSADOR
         </h2>
         <div class="inputBox">
             <input name="Cname" type="text" required="required">
@@ -52,7 +50,7 @@
             <span>Email</span>
         </div>
         <div class="inputBox">
-            <input  name="Cnum" type="tel" required="required" pattern="[0-9]{10}">
+            <input name="Cnum" type="tel" required="required" pattern="[0-9]{10}">
             <span>Phone Number</span>
         </div>
         <div class="inputBox">
@@ -76,7 +74,7 @@
             <span>Message</span>
         </div>
         <div class="inputBox">
-            	<button onclick='SubForm()'>Submit</button>
+            <button onclick='SubForm()'>Submit</button>
         </div>
     </fieldset>
 
