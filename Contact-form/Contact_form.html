@@ -24,6 +24,13 @@
             });
         }
     </script>
+    <script>
+        function limitPhoneNumber(input) {
+            if (input.value.length > 10) {
+                input.value = input.value.slice(0, 10);
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -50,7 +57,8 @@
             <span>Email</span>
         </div>
         <div class="inputBox">
-            <input name="Cnum" type="tel" required="required" pattern="[0-9]{10}">
+<!--             <input name="Cnum" type="tel" required="required" pattern="[0-9]{10}"> -->
+            <input name="Cnum" type="tel" id="phone" oninput="limitPhoneNumber(this)" maxlength="10" required>
             <span>Phone Number</span>
         </div>
         <div class="inputBox">
