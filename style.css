@@ -1388,7 +1388,7 @@ li.link:hover {
     font-size: max(5vh, 4vw);
   }
   button.signup {
-    font-size: max(2.75vw, 3.75vh);
+    font-size: max(2.75vw, 3vh);
   }
   .card-inner h1 {
     font-size: max(3.5vh, 3.5vw);
