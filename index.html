@@ -13,6 +13,25 @@
    <title>CA Program - Wissenaire'24 | IIT Bhubaneswar</title>
   <link rel="icon" href="./images/logo.png" />
   <link rel="stylesheet" href="style.css" />
+  <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/OkrNBJC87WDB3xix/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert(" Thanks for contacting us :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
 </head>
 
 <body>
@@ -298,12 +317,12 @@
             <h1>Contact Us</h1>
             <hr />
             <div class="cont-box">
-              <form class="cont-form" action="index.html" method="post">
-                <input type="text" class="form-txt" placeholder="Your Name" required />
-                <input type="email" class="form-txt" placeholder="Your Email" required />
-                <input type="number" class="form-txt" placeholder="Your Phone Number" required />
-                <textarea type="text" class="form-txt" placeholder="Your Message" required></textarea>
-                <input type="submit" class="submit" value="SEND" required />
+              <form class="cont-form" id="myForm" method="post">
+                <input type="text" name="name" class="form-txt" placeholder="Your Name" required />
+                <input type="email" name="email" class="form-txt" placeholder="Your Email" required />
+                <input type="number" name="phone" class="form-txt" placeholder="Your Phone Number" required />
+                <textarea type="text" name="msg" class="form-txt" placeholder="Your Message" required></textarea>
+                <input type="submit" onclick='SubForm()' class="submit" value="SEND" required />
               </form>
             </div>
           </div>
