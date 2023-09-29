@@ -191,6 +191,7 @@
     469px 1865px #fff, 1804px 1100px #fff, 1811px 196px #fff;
   animation: animStar 50s linear infinite;
 }
+
 #stars:after {
   content: " ";
   position: absolute;
@@ -434,6 +435,7 @@
     1219px 1172px #fff, 499px 380px #fff;
   animation: animStar 100s linear infinite;
 }
+
 #stars2:after {
   content: " ";
   position: absolute;
@@ -526,6 +528,7 @@
     1310px 95px #fff;
   animation: animStar 150s linear infinite;
 }
+
 #stars3:after {
   content: " ";
   position: absolute;
@@ -560,10 +563,12 @@
     665px 1619px #fff, 790px 420px #fff, 1633px 154px #fff, 559px 1346px #fff,
     1310px 95px #fff;
 }
+
 @keyframes animStar {
   from {
     transform: translateY(0px);
   }
+
   to {
     transform: translateY(-2000px);
   }
@@ -726,6 +731,8 @@ img.wissenaire {
 
 button {
   border: 0ch;
+  background-color: black;
+  color: white;
 }
 
 a {
@@ -866,9 +873,11 @@ a#signup {
   justify-content: center;
   align-items: center;
 }
+
 .RESPONSIBILITIES h1 {
   margin-bottom: 4vh;
 }
+
 .card-inner p {
   width: 90%;
   margin-left: 5%;
@@ -878,6 +887,7 @@ a#signup {
   letter-spacing: 0.5px;
   word-spacing: max(0.35vw, 0.35vh);
 }
+
 @keyframes move-up6 {
   to {
     transform: translateY(-max(0.7vw, 0.65vh));
@@ -897,10 +907,12 @@ a#signup {
   margin: 0;
   box-sizing: border-box;
 }
+
 #RESPONSIBILITIES {
   width: 100%;
   padding: 70px 0;
 }
+
 .response {
   display: flex;
   padding: 0 60px;
@@ -908,6 +920,7 @@ a#signup {
   justify-content: space-around;
   align-items: center;
 }
+
 .container {
   background-attachment: fixed;
   perspective: 1000px;
@@ -917,6 +930,7 @@ a#signup {
   cursor: pointer;
   margin-bottom: 20px;
 }
+
 .card {
   transform-style: preserve-3d;
   height: 100%;
@@ -924,6 +938,7 @@ a#signup {
   transition: 0.5s ease;
   background: transparent;
 }
+
 .front,
 .back {
   height: 100%;
@@ -941,17 +956,21 @@ a#signup {
   box-shadow: 0 5px 10px #03140d;
   backface-visibility: hidden;
 }
+
 .front {
   display: flex;
   background: linear-gradient(to right, #1b2735, #38495a 270%);
 }
+
 .front img {
   width: 80px;
 }
+
 .content {
   transform: translateZ(60px);
   align-items: center;
 }
+
 .content h3,
 .card-t {
   font-size: 22px;
@@ -961,18 +980,21 @@ a#signup {
   display: flex;
   flex-direction: column;
 }
+
 .content p {
   font-family: "Roboto-m";
   font-size: 15px;
   line-height: 20px;
   padding: 10px 20px;
 }
+
 .back {
   background: linear-gradient(to left, #1b2735, #38495a 270%);
   background-size: 100% 100%;
   color: #ffffff;
   transform: rotateX(180deg);
 }
+
 /*INCENTIVES*/
 
 .incen-content {
@@ -1041,6 +1063,7 @@ a#signup {
   font-weight: bold;
   color: white;
   font-family: "istok";
+
   h2 {
     font-family: "Roboto-m";
   }
@@ -1085,6 +1108,7 @@ div.tril {
   left: unset;
   right: 5vw;
 }
+
 /*TESTIMONIALS*/
 .testimonials {
   width: 100vw;
@@ -1098,6 +1122,7 @@ div.tril {
   align-items: center;
   justify-content: center;
 }
+
 #cards {
   position: relative;
   width: 500vw;
@@ -1105,6 +1130,7 @@ div.tril {
   display: flex;
   justify-content: space-around;
 }
+
 .card-t {
   width: 100vw;
   height: 100%;
@@ -1115,21 +1141,25 @@ div.tril {
   position: absolute;
   transition: transform 0.5s;
 }
+
 .card-t .description {
   width: 100vw;
   padding: 0 10vw 3% 10vw;
 }
+
 .img {
   display: flex;
   justify-content: center;
   align-items: start;
   margin-top: 7vh;
 }
+
 .img img {
   height: 200px;
   aspect-ratio: 1;
   border-radius: 50%;
 }
+
 /*CONTACT*/
 
 .cmplt-contact {
@@ -1195,7 +1225,7 @@ div.tril {
   background: #ebebeb;
 }
 
-.submit {
+.inputBox {
   display: block;
   background: black;
   padding: 14px 0;
@@ -1213,15 +1243,19 @@ div.tril {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   .cont h1 {
     font-size: 25px;
   }
+
   .form-txt {
     font-size: 13px;
   }
+
   .media h3 {
     font-size: 23px;
   }
+
   .media h1 {
     font-size: 35px;
   }
@@ -1315,29 +1349,30 @@ li.link:hover {
 .icon i {
   margin: auto;
 }
+
 .icon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .icon img {
   width: 30px;
   aspect-ratio: 1;
 }
+
 .icon:hover i,
 .icon:hover img {
   animation: shake 0.25s;
 }
 
 .icon--instagram:hover {
-  background-image: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
+  background-image: radial-gradient(circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%);
   outline-color: #a02d76;
   color: white;
 }
@@ -1379,108 +1414,140 @@ li.link:hover {
 }
 
 @supports not (-webkit-touch-callout: none) {
+
   /*android*/
   .catxt {
     font-size: max(4.5vh, 4vw);
   }
+
   .wiss,
   div.wiss p {
     font-size: max(5vh, 4vw);
   }
+
   button.signup {
     font-size: max(2.75vw, 3vh);
   }
+
   .card-inner h1 {
     font-size: max(3.5vh, 3.5vw);
   }
+
   h1#fur {
     font-size: max(2.5vw, 2.25vh);
   }
+
   .card-inner p,
   .card-t p {
     font-size: max(1.9vh, 1.4vw);
   }
+
   .card-t .description {
     font-size: max(2.25vw, 2.25vh);
   }
+
   .card__title {
     font-size: max(3vh, 3vw);
   }
+
   .card__description {
     font-size: max(1.4vh, 1.3vw);
   }
+
   p.ca {
     font-size: max(3.5vh, 3.5vw);
   }
+
   .bb {
     font-size: max(2vh, 2vw);
   }
+
   .heading h1 {
     font-size: max(3.5vh, 3.5vw);
   }
+
   .item-name h2 {
     font-size: max(2.5vh, 2.5vw);
   }
+
   .headings {
     font-size: max(4.5vh, 3vh);
   }
+
   .information {
     font-size: max(2.5vw, 2.5vh);
   }
+
   div#heading {
     font-size: max(2vh, 2vw);
   }
 }
 
 @supports (-webkit-touch-callout: none) {
+
   /*ios*/
   .catxt {
     font-size: max(6vh, 5vw);
   }
+
   .wiss,
   div.wiss p {
     font-size: max(6.5vh, 5.5vw);
   }
+
   button.signup {
     font-size: max(3.5vw, 5vh);
   }
+
   h1#fur {
     font-size: max(3vw, 3vh);
   }
+
   .card-t .description {
     font-size: max(2.25vw, 2.25vh);
   }
+
   .card-inner h1 {
     font-size: max(4.5vh, 4.5vw);
   }
+
   .card-inner p,
   .card-t p {
     font-size: max(2.2vh, 2.2vw);
   }
-  .card__title{
+
+  .card__title {
     font-size: max(4vh, 3vw);
   }
+
   .card__description {
     font-size: max(1.7vh, 1.6vw);
   }
+
   p.ca {
     font-size: max(4.5vh, 4.5vw);
   }
+
   .bb {
     font-size: max(3vh, 3vw);
   }
+
   .item-name h2 {
     font-size: max(2.5vh, 2.5vw);
   }
+
   .heading {
     font-size: max(4.5vh, 4.5vw);
   }
+
   .headings {
     font-size: max(5vh, 3.5vh);
   }
+
   .information {
     font-size: max(3.5vw, 3.5vh);
   }
+
   div#heading {
     font-size: max(3vh, 3vw);
   }
