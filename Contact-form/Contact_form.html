@@ -11,20 +11,38 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script>
         function SubForm() {
-            $.ajax({
-                url: "https://api.apispreadsheets.com/data/u9Da68KtkLosu3Fu/",
-                type: "post",
-                data: $("#myForm").serializeArray(),
-                success: function () {
-                    alert("You Have Succesfully registered!")
-                },
-                error: function () {
-                    alert("There was an error :(")
-                }
-            });
+
+            if (validateForm()) {
+                $.ajax({
+                    url: "https://api.apispreadsheets.com/data/u9Da68KtkLosu3Fu/",
+                    type: "post",
+                    data: $("#myForm").serializeArray(),
+                    success: function () {
+                        alert("You Have Successfully registered!");
+                    },
+                    error: function () {
+                        alert("There was an error :(");
+                    }
+                });
+            } else {
+                alert("Please fill in all required fields.");
+            }
         }
-    </script>
-    <script>
+
+
+        function validateForm() {
+
+            var requiredInputs = document.querySelectorAll('input[required]');
+
+
+            for (var i = 0; i < requiredInputs.length; i++) {
+                if (requiredInputs[i].value.trim() === '') {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         function limitPhoneNumber(input) {
             if (input.value.length > 10) {
                 input.value = input.value.slice(0, 10);
@@ -49,36 +67,36 @@
             AMBASSADOR
         </h2>
         <div class="inputBox">
-            <input name="Cname" type="text" required="required">
+            <input name="Cname" type="text" required>
             <span>Name</span>
         </div>
         <div class="inputBox">
-            <input name="Cemail" type="email" required="required">
+            <input name="Cemail" type="email" required>
             <span>Email</span>
         </div>
         <div class="inputBox">
-<!--             <input name="Cnum" type="tel" required="required" pattern="[0-9]{10}"> -->
-            <input name="Cnum" type="tel" id="phone" oninput="limitPhoneNumber(this)" maxlength="10" required>
+            <!--             <input name="Cnum" type="tel" required="required" pattern="[0-9]{10}"> -->
+            <input name="Cnum" type="number" id="phone" oninput="limitPhoneNumber(this)" maxlength="10" required>
             <span>Phone Number</span>
         </div>
         <div class="inputBox">
-            <input name="Cinst" type="text" required="required">
+            <input name="Cinst" type="text" required>
             <span>Institute of Study</span>
         </div>
         <div class="inputBox">
-            <input name="Cbranch" type="text" required="required">
+            <input name="Cbranch" type="text" required>
             <span>Branch</span>
         </div>
         <div class="inputBox">
-            <input name="Ccity" type="text" required="required">
+            <input name="Ccity" type="text" required>
             <span>City</span>
         </div>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input type="text" required>
             <span>Referal</span>
         </div>
         <div class="inputBox">
-            <textarea required rows="1" cols="30"></textarea>
+            <input type="text" required>
             <span>Why CA?</span>
         </div>
         <div class="inputBox">
