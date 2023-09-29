@@ -18,20 +18,45 @@
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous"></script>
 	<script>
-		function SubForm (){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/OkrNBJC87WDB3xix/",
-				type:"post",
-				data:$("#myForm").serializeArray(),
-				success: function(){
-					alert(" Thanks for contacting us :)")
-				},
-				error: function(){
-					alert("There was an error :(")
-				}
-			});
-		}
-	</script>
+    function SubForm() {
+
+      if (validateForm()) {
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/OkrNBJC87WDB3xix/",
+          type: "post",
+          data: $("#myForm").serializeArray(),
+          success: function () {
+            alert("You Have Successfully registered!");
+          },
+          error: function () {
+            alert("There was an error :(");
+          }
+        });
+      } else {
+        alert("Please fill in all required fields.");
+      }
+    }
+
+
+    function validateForm() {
+
+      var requiredInputs = document.querySelectorAll('input[required]');
+
+
+      for (var i = 0; i < requiredInputs.length; i++) {
+        if (requiredInputs[i].value.trim() === '') {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function limitPhoneNumber(input) {
+      if (input.value.length > 10) {
+        input.value = input.value.slice(0, 10);
+      }
+    }
+  </script>
 </head>
 
 <body>
