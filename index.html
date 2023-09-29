@@ -10,14 +10,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" class="arrow"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-   <title>CA Program - Wissenaire'24 | IIT Bhubaneswar</title>
+  <title>CA Program - Wissenaire'24 | IIT Bhubaneswar</title>
   <link rel="icon" href="./images/logo.png" />
   <link rel="stylesheet" href="style.css" />
-  <script
-		src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous"></script>
-	<script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script>
     function SubForm() {
 
       if (validateForm()) {
@@ -71,10 +69,10 @@
     <nav>
       <div class="small">
         <div class="small-item">
-<!--           <img class="wiss" src="./images/Wiss_logo.png" alt="WISSENAIRE" /> -->
-                     <img class="wiss" src="./images/Wiss_logo.png" alt="WISSENAIRE" />
+          <!--           <img class="wiss" src="./images/Wiss_logo.png" alt="WISSENAIRE" /> -->
+          <img class="wiss" src="./images/Wiss_logo.png" alt="WISSENAIRE" />
 
-        
+
         </div>
         <div class="small-item">
           <button class="menu bars" id="menu">
@@ -324,7 +322,7 @@
           <div class="description"> Overwhelmed by the warm reception from the host college.</div>
           <p style="margin-left: 25vw;">~A SRINATH
           </p>
-          <div class="img""><img src="./images/WhatsApp Image 2023-09-21 at 22.50.04.jpg" alt=""></div>
+          <div class="img""><img src=" ./images/WhatsApp Image 2023-09-21 at 22.50.04.jpg" alt=""></div>
         </div>
       </div>
       <button id="next-t">
@@ -342,12 +340,17 @@
             <h1>Contact Us</h1>
             <hr />
             <div class="cont-box">
-              <form class="cont-form" id="myForm" >
+              <form class="cont-form" id="myForm">
                 <input type="text" name="name" class="form-txt" placeholder="Your Name" required />
                 <input type="email" name="email" class="form-txt" placeholder="Your Email" required />
-                <input type="number" name="phone" class="form-txt" placeholder="Your Phone Number" required />
+                <!-- <input type="number" name="phone" class="form-txt" placeholder="Your Phone Number" required /> -->
+                <input name="number" type="number" class="form-txt" id="phone" placeholder="Your Phone Number"
+                  oninput="limitPhoneNumber(this)" maxlength="10" required>
                 <textarea type="text" name="msg" class="form-txt" placeholder="Your Message" required></textarea>
-                <input type="submit" onclick='SubForm()' class="submit" required />
+                <!-- <input type="submit" onclick='SubForm()' class="submit" /> -->
+                <div class="inputBox">
+                  <button onclick='SubForm()'>Submit</button>
+                </div>
               </form>
             </div>
           </div>
