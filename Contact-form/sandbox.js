@@ -1,5 +1,11 @@
 const emailInput = document.getElementById("emailInput");
 
+function extractAccessTokenFromURL() {
+  var hash = window.location.hash.substring(1);
+  var params = new URLSearchParams(hash);
+  return params.get("access_token");
+}
+
 const CookieManager = {
   setCookie: function (name, value, days) {
     let expires = "";
@@ -27,7 +33,7 @@ const CookieManager = {
       name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   },
 };
-const accessToken = CookieManager.getCookie("usertoken");
+
 function getUserData(accessToken) {
   fetch("https://www.googleapis.com/oauth2/v1/userinfo", {
     headers: {
@@ -43,4 +49,4 @@ function getUserData(accessToken) {
     .catch((error) => console.error("Error fetching user data:", error));
 }
 
-getUserData(accessToken);
+getUserData(extractAccessTokenFromURL());
