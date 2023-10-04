@@ -30,7 +30,7 @@ function oauthSignIn() {
   // Parameters to pass to OAuth 2.0 endpoint.
   var params = {
     client_id:
-      "825633599350-ec38a5h9ktltlip2a01vcr3ga6utviug.apps.googleusercontent.com",
+      "160027367801-m3en2sdk8jhikuhupe5sqnd9urot9dlp.apps.googleusercontent.com",
 
     redirect_uri: "http://ca.wissenaire.org",
     response_type: "token",
