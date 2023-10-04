@@ -32,7 +32,7 @@ function oauthSignIn() {
     client_id:
       "825633599350-ec38a5h9ktltlip2a01vcr3ga6utviug.apps.googleusercontent.com",
 
-    redirect_uri: "http://ca.wissenaire.org/",
+    redirect_uri: "http://ca.wissenaire.org",
     response_type: "token",
     scope: "profile email",
     state: "pass-through value",
