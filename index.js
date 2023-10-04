@@ -52,7 +52,7 @@ function handleOAuthRedirect() {
 }
 
 // Call the function to handle the redirect
-handleOAuthRedirect();
+// handleOAuthRedirect();
 
 let active = 3;
 function loadShow() {
