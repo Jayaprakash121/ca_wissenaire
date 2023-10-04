@@ -13,7 +13,6 @@ function getUserData(accessToken) {
     .then((response) => response.json())
     .then((data) => {
       console.log("User Data:", data);
-      alert("got data");
     })
     .catch((error) => console.error("Error fetching user data:", error));
 }
@@ -32,7 +31,7 @@ function oauthSignIn() {
     client_id:
       "160027367801-m3en2sdk8jhikuhupe5sqnd9urot9dlp.apps.googleusercontent.com",
 
-    redirect_uri: "https://ca.wissenaire.org",
+    redirect_uri: "https://ca.wissenaire.org/Contact-form/Contact_form.html",
     response_type: "token",
     scope: "profile email",
     state: "pass-through value",
