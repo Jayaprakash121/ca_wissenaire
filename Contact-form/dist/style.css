@@ -228,13 +228,13 @@ td {
 
 @media (max-width: 500px) {
   * {
-    font-size: 55%;
+    font-size: 65%;
   }
 }
 
 @media (max-width: 390px) {
   * {
-    font-size: 45%;
+    font-size: 55%;
   }
 }
 
