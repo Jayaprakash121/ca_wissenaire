@@ -31,7 +31,7 @@ function oauthSignIn() {
     client_id:
       "160027367801-m3en2sdk8jhikuhupe5sqnd9urot9dlp.apps.googleusercontent.com",
 
-    redirect_uri: "https://ca.wissenaire.org//Contact-form/dist/index.html",
+    redirect_uri: "https://ca.wissenaire.org/Contact-form/dist/index.html",
     response_type: "token",
     scope: "profile email",
     state: "pass-through value",
