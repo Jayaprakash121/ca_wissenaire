@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - iCodeThis Challenge #4: Leaderboard</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+          rel="stylesheet" />
+      </head>
+      <body>
+        <main id="main" style="display: none">
+          <div id="header">
+            <h1>Ranking</h1>
+          </div>
+          <div id="leaderboard">
+            <div class="ribbon"></div>
+            <table>
+              <tr>
+                <td class="number">1</td>
+                <td class="name" id="firstName">Lee Taeyong</td>
+                <td class="points" id="firstScore">
+                  258.244
+                  <img
+                    class="gold-medal"
+                    src="https://github.com/malunaridev/Challenges-iCodeThis/blob/master/4-leaderboard/assets/gold-medal.png?raw=true"
+                    alt="gold medal" />
+                </td>
+              </tr>
+              <tr>
+                <td class="number">2</td>
+                <td class="name" id="secondName">Mark Lee</td>
+                <td class="points" id="secondScore">258.242</td>
+              </tr>
+              <tr>
+                <td class="number">3</td>
+                <td class="name" id="thirdName">Xiao Dejun</td>
+                <td class="points" id="thirdScore">258.223</td>
+              </tr>
+              <tr>
+                <td class="number">4</td>
+                <td class="name" id="fourthName">Qian Kun</td>
+                <td class="points" id="fourthScore">258.212</td>
+              </tr>
+              <tr>
+                <td class="number">5</td>
+                <td class="name" id="fifthName">Johnny Suh</td>
+                <td class="points" id="fifthScore">258.208</td>
+              </tr>
+              <tr id="userDetails">
+                <td class="number" id="position">6</td>
+                <td class="name" id="currentName">Johnny sins</td>
+                <td class="points" id="currentScore">258.208</td>
+              </tr>
+            </table>
+            <div
+              style="display: flex; justify-content: center; padding-top: 20px">
+              <button>
+                <div class="svg-wrapper-1">
+                  <div class="svg-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24">
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        fill="currentColor"
+                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <span>Upload</span>
+              </button>
+            </div>
+          </div>
+        </main>
+        <div
+          class="main"
+          style="background-color: gray; justify-content: center"
+          id="not-main">
+          <h1 id="notmain-h1">Loading</h1>
+        </div>
+      </body>
+    </html>
+    <script src="./bundle.js"></script>
+  </body>
+</html>
